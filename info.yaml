@@ -46,4 +46,4 @@ pinout:
   uio[5]: "Unused"
   uio[6]: "Unused"
   uio[7]: "Done Flag Output (uio_out)"
-  
+  yaml_version: 4
