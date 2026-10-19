@@ -5,10 +5,4 @@ on:
 
 jobs:
   gds:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Build GDS and 3D View
-        uses: tinytapeout/tt-gds-action@v2
+    uses: tinytapeout/tt-gds-action/.github/workflows/gds.yaml@v2
