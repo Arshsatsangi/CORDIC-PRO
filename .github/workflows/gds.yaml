@@ -1,8 +1,15 @@
 name: gds
+
 on:
   push:
   workflow_dispatch:
 
 jobs:
   gds:
-    uses: tinytapeout/tt-gds-action/.github/workflows/gds.yaml@v2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build GDS
+        uses: tinytapeout/tt-gds-action@tt10
