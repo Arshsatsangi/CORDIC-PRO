@@ -1,1 +1,49 @@
+project:
+  title:        "32-bit CORDIC Processor"
+  author:       "Arsh Satsangi"
+  discord:      ""
+  description:  "32-bit fixed-point Q2.30 iterative CORDIC processor calculating sine and cosine"
+  language:     "Verilog"
+  clock_hz:     10000000
 
+  # 32-bit design ke liye 2x2 tiles select kiya hai
+  tiles:        "2x2"
+
+  # Top Module Name
+  top_module:   "tt_um_cordic_processor"
+
+  # Source Files inside src/
+  source_files:
+    - "project.v"
+    - "cordic_core.v"
+    - "cordic_atan_lut.v"
+
+# Pinout Descriptions for Documentation
+pinout:
+  ui[0]: "Data input bit 0 (ui_in)"
+  ui[1]: "Data input bit 1"
+  ui[2]: "Data input bit 2"
+  ui[3]: "Data input bit 3"
+  ui[4]: "Data input bit 4"
+  ui[5]: "Data input bit 5"
+  ui[6]: "Data input bit 6"
+  ui[7]: "Data input bit 7"
+
+  uo[0]: "Data output bit 0 (uo_out)"
+  uo[1]: "Data output bit 1"
+  uo[2]: "Data output bit 2"
+  uo[3]: "Data output bit 3"
+  uo[4]: "Data output bit 4"
+  uo[5]: "Data output bit 5"
+  uo[6]: "Data output bit 6"
+  uo[7]: "Data output bit 7"
+
+  uio[0]: "Byte Sel 0 (uio_in)"
+  uio[1]: "Byte Sel 1 (uio_in)"
+  uio[2]: "Write Enable (uio_in)"
+  uio[3]: "Start Pulse (uio_in)"
+  uio[4]: "Output Sel: 0=Cos, 1=Sin"
+  uio[5]: "Unused"
+  uio[6]: "Unused"
+  uio[7]: "Done Flag Output (uio_out)"
+  
